@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Lexend", sans-serif;
+  --color-primary: #f2a20d;
+  --color-navy-deep: #020617;
+  --color-navy-card: #0f172a;
+  --color-navy-border: #1e293b;
+}
+
+@layer base {
+  body {
+    @apply font-display bg-navy-deep text-slate-100 antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-navy-card/50 backdrop-blur-md border border-navy-border hover:border-primary/50 transition-all duration-300;
+}
+
+.primary-button {
+  @apply px-6 py-3 bg-primary text-navy-deep font-black rounded-lg hover:bg-white transition-all shadow-lg shadow-primary/20 uppercase tracking-wider text-sm active:scale-95;
+}
+
+.secondary-button {
+  @apply px-6 py-3 bg-white/5 backdrop-blur-md text-white border border-white/20 font-bold rounded-lg hover:bg-white/10 transition-all uppercase tracking-wider text-sm active:scale-95;
+}
